@@ -1,17 +1,21 @@
-@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@layer base {
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+}
+
+@media (prefers-color-scheme: dark) {
   :root {
-    --font-great-vibes: 'Great Vibes', cursive;
+    --background: #0a0a0a;
+    --foreground: #ededed;
   }
 }
 
-.font-great-vibes {
-  font-family: var(--font-great-vibes);
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Arial, Helvetica, sans-serif;
 }
-
-
